@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.background-animate {
+	background-size: 400%;
+	--duration: 10s;
+
+	-webkit-animation: background-gradient var(--duration) ease infinite;
+	-moz-animation: background-gradient var(--duration) ease infinite;
+	animation: background-gradient var(--duration) ease infinite;
+}
+
+@keyframes background-gradient {
+
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+}
+
+*, ::before, ::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	transition: all .2s ease;
+}
